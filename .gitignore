@@ -33,3 +33,7 @@ dist-ssr/
 
 # Arquivos de sistema
 Thumbs.db
+
+# Arquivos de Teste e Seeds
+seeds.sql
+test_requests.http
