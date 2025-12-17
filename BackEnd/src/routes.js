@@ -19,6 +19,7 @@ routes.post("/produtoss", ProdutoController.store);
 routes.put("/produtos/:id", ProdutoController.update);
 routes.delete("/produtos/:id", ProdutoController.delete);
 
+// Rotas de compras
 routes.get("/compras", CompraController.index);
 routes.get("/compras/:id", CompraController.show);
 routes.post("/compras", CompraController.store);
