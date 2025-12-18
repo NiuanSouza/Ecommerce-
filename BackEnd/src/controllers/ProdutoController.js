@@ -3,10 +3,22 @@ const db = require("../database/connection");
 module.exports = {
   // Listar todos os produtos(Read)
   index(req, res) {
-    db.all("SELECT * FROM Produto", (err, rows) => {
-      if (err) return res.status(500).json({ error: err.message });
-      res.json(rows);
-    });
+    const { id_usuario_vendedor } = req.query;
+    if (id_usuario_vendedor) {
+      db.all(
+        "SELECT * FROM Produto WHERE id_usuario_vendedor = ?",
+        [id_usuario_vendedor],
+        (err, rows) => {
+          if (err) return res.status(500).json({ error: err.message });
+          res.json(rows);
+        },
+      );
+    } else {
+      db.all("SELECT * FROM Produto", (err, rows) => {
+        if (err) return res.status(500).json({ error: err.message });
+        res.json(rows);
+      });
+    }
   },
 
   // Buscar um produto específico (Read)

@@ -4,6 +4,7 @@ import Produtos from "./pages/Produtos";
 import Compras from "./pages/Compras";
 import HomePortal from "./HomePortal.jsx";
 import ClientePortal from "./pages/ClientePortal";
+import VendedorPortal from "./pages/VendedorPortal";
 import logoEcommerce from "./assets/ecommerce.png";
 
 import "./App.css";
@@ -84,9 +85,7 @@ function App() {
 
         {}
         {portal === "cliente" && <ClientePortal />}
-        {portal === "vendedor" && (
-          <h2>Portal do Vendedor (Em desenvolvimento)</h2>
-        )}
+        {portal === "vendedor" && <VendedorPortal />}
       </main>
     </div>
   );

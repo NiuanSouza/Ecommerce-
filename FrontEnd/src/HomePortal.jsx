@@ -15,7 +15,7 @@ function HomePortal({ onSelectPortal }) {
         </div>
         <div className="portal-card" onClick={() => onSelectPortal("vendedor")}>
           <h3>🏪 Vendedor</h3>
-          <p>Cadastre seus produtos e veja o desempenho de vendas.</p>
+          <p>Cadastre seus produtos e veja seu estoque.</p>
         </div>
       </div>
     </div>
